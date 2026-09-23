@@ -1,0 +1,18 @@
+# Prevent directory listing
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Prevent direct web access to sensitive directories and configuration files
+    RewriteRule ^(\.env|spark|composer\.(json|lock)|app|writable|vendor)(/.*)?$ - [F,L,NC]
+
+    # If accessing the root, route directly to public/
+    RewriteRule ^$ public/ [L]
+
+    # Route all other non-existing files and folders to public/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ public/$1 [L,QSA]
+</IfModule>
+

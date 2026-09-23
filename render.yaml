@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: kevs-voting
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: CI_ENVIRONMENT
+        value: production
+      - key: database.default.hostname
+        sync: false
+      - key: database.default.database
+        sync: false
+      - key: database.default.username
+        sync: false
+      - key: database.default.password
+        sync: false
+      - key: database.default.DBDriver
+        value: MySQLi
+      - key: database.default.port
+        value: "3306"
+      - key: database.default.DBPrefix
+        value: ""

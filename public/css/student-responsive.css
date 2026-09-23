@@ -1,0 +1,499 @@
+/* Responsive Styles for Student Dashboard with Burger Menu */
+
+:root {
+    --student-bg-primary: #0F2B72;
+    --student-bg-secondary: #07153a;
+    --student-accent: #FCD34D;
+    --student-accent-hover: #FBBF24;
+    --student-text: #FFFFFF;
+    --student-text-muted: rgba(255, 255, 255, 0.7);
+    --student-border: rgba(255, 255, 255, 0.2);
+    --student-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Main Body and Container Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--student-bg-primary);
+    color: var(--student-text);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    margin-top: 0 !important;
+}
+
+/* Hide old sidebar completely */
+.sidebar {
+    display: none !important;
+}
+
+.sidebar-overlay {
+    display: none !important;
+}
+
+/* Burger Button - Show on All Devices */
+.burger-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.burger-header {
+    display: flex !important;
+}
+
+.burger-menu {
+    display: block !important;
+}
+
+/* Responsive Grid for Cards */
+.card-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Page Title Styling */
+.page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--student-text);
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.page-subtitle {
+    color: var(--student-text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Card Styling */
+.card {
+    background: #1a3a52;
+    border: 1px solid var(--student-border);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: var(--student-transition);
+    margin-bottom: 2rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border-color: rgba(252, 211, 77, 0.3);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--student-accent);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.card-title i {
+    color: var(--student-accent);
+    font-size: 1.5rem;
+}
+
+/* Election Items */
+.election-item {
+    border: 1px solid var(--student-border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: var(--student-transition);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.election-item:hover {
+    border-color: var(--student-accent);
+    background: rgba(252, 211, 77, 0.1);
+}
+
+.election-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--student-text);
+    margin-bottom: 0.5rem;
+}
+
+.election-status {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background: rgba(252, 211, 77, 0.2);
+    color: var(--student-accent);
+    margin-bottom: 1rem;
+}
+
+/* Button Styles */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--student-transition);
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background: var(--student-accent);
+    color: #2D4A73;
+}
+
+.btn-primary:hover {
+    background: var(--student-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(252, 211, 77, 0.4);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--student-text);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* History Items */
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--student-border);
+    transition: var(--student-transition);
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.history-item:hover {
+    background: rgba(252, 211, 77, 0.05);
+}
+
+.history-title {
+    font-weight: 600;
+    color: var(--student-text);
+}
+
+.history-date {
+    font-size: 0.85rem;
+    color: var(--student-text-muted);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--student-text);
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid rgba(252, 211, 77, 0.3);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: var(--student-transition);
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--student-text);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--student-accent);
+    box-shadow: 0 0 0 3px rgba(252, 211, 77, 0.2);
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Alert Messages */
+.alert {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    animation: slideIn 0.3s ease-out;
+}
+
+.alert-success {
+    background: rgba(252, 211, 77, 0.2);
+    color: var(--student-accent);
+    border: 1px solid rgba(252, 211, 77, 0.4);
+}
+
+.alert-danger {
+    background: rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 300;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #2D4A73;
+    border: 1px solid rgba(252, 211, 77, 0.3);
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease-out;
+}
+
+.modal-header {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--student-accent);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.6);
+    transition: var(--student-transition);
+}
+
+.modal-close:hover {
+    color: var(--student-text);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Profile Detail Styles */
+.profile-detail-item {
+    text-align: left;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.profile-detail-label {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.profile-detail-value {
+    font-size: 0.95rem;
+    color: var(--student-text);
+    font-weight: 500;
+}
+
+/* Responsive Design - Tablets & Mobile (768px and below) */
+@media (max-width: 768px) {
+    .burger-btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .burger-header {
+        display: flex !important;
+    }
+
+    .burger-menu {
+        display: block !important;
+    }
+
+    .burger-overlay {
+        display: block !important;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    .container-main {
+        padding: 1.5rem 1rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        max-width: 90%;
+    }
+
+    .burger-menu {
+        max-width: 320px;
+    }
+}
+
+/* Responsive Design - Mobile (480px and below) */
+@media (max-width: 480px) {
+    .burger-header {
+        padding: 0.75rem;
+    }
+
+    .burger-header-title h1 {
+        font-size: 0.95rem;
+    }
+
+    .burger-header-title p {
+        display: none;
+    }
+
+    .page-title {
+        font-size: 1.25rem;
+    }
+
+    .container-main {
+        padding: 1rem 0.75rem;
+    }
+
+    .card {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        padding: 0.65rem 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .modal-content {
+        padding: 1.5rem;
+        border-radius: 10px;
+    }
+
+    .modal-header {
+        font-size: 1.25rem;
+    }
+
+    .election-item {
+        padding: 1rem;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Accessibility */
+.burger-btn:focus,
+.btn:focus,
+.form-input:focus {
+    outline: 2px solid var(--student-accent);
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .burger-header,
+    .burger-btn,
+    .burger-menu,
+    .burger-overlay {
+        display: none !important;
+    }
+}
+
+/* Desktop View - Hide Burger Button (Laptops & PCs) */
+@media (min-width: 769px) {
+    .burger-btn {
+        display: none !important;
+    }
+
+    .burger-header {
+        display: none !important;
+    }
+
+    .burger-menu {
+        display: none !important;
+    }
+
+    .burger-overlay {
+        display: none !important;
+    }
+}
