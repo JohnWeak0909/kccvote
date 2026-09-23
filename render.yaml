@@ -8,16 +8,16 @@ services:
       - key: CI_ENVIRONMENT
         value: production
       - key: database.default.hostname
-        sync: false
+        value: gateway01.ap-southeast-1.prod.aws.tidbcloud.com
       - key: database.default.database
-        sync: false
+        value: voting_system
       - key: database.default.username
-        sync: false
+        value: ASkvQdAS9K4XjkQ.root
       - key: database.default.password
         sync: false
       - key: database.default.DBDriver
         value: MySQLi
       - key: database.default.port
-        value: "3306"
+        value: "4000"
       - key: database.default.DBPrefix
         value: ""

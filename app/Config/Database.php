@@ -200,5 +200,10 @@ class Database extends Config
         if (ENVIRONMENT === 'testing') {
             $this->defaultGroup = 'tests';
         }
+
+        // Automatically enable SSL when connecting to cloud MySQL (such as TiDB Cloud)
+        if (str_contains($this->default['hostname'] ?? '', 'tidbcloud.com')) {
+            $this->default['encrypt'] = ['ssl_verify' => false];
+        }
     }
 }
