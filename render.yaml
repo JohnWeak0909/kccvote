@@ -14,7 +14,7 @@ services:
       - key: database.default.username
         value: ASkvQdAS9K4XjkQ.root
       - key: database.default.password
-        sync: false
+        value: 4SwjC9Wr4XnmAQbj
       - key: database.default.DBDriver
         value: MySQLi
       - key: database.default.port
